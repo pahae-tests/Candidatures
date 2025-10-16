@@ -17,7 +17,6 @@ export default async function handler(req, res) {
     const candidatures = await Candidature.find({ user: user._id });
 
     const headers = [
-      'Utilisateur',
       'Entreprise',
       'Type d\'emploi',
       'Etat',
@@ -27,7 +26,6 @@ export default async function handler(req, res) {
     ].join(';') + '\r\n';
 
     const rows = candidatures.map(candidature => [
-      candidature.nom + candidature.prenom,
       `"${candidature.entreprise}"`,
       candidature.typeEmploi,
       candidature.etat.replace("é", "e"),
