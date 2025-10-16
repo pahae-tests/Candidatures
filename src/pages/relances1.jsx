@@ -173,7 +173,7 @@ export default function Candidatures({ isDark, applications, setApplications }) 
         <div className={`absolute bottom-20 right-10 w-96 h-96 rounded-full blur-3xl opacity-20 animate-pulse ${isDark ? 'bg-cyan-600' : 'bg-cyan-400'
           }`} style={{ animationDuration: '6s' }}></div>
       </div>
-      <div className="relative z-10 container mx-auto px-4 py-12">
+      <div className="relative z-10 mx-auto px-4 py-12">
         <div className="text-center mb-12 mt-20">
           <div className="inline-block mb-6">
             <div className="relative">
@@ -624,4 +624,5 @@ export async function getServerSideProps({ req, res }) {
   return {
     props: { session: { _id: user._id, nom: user.nom, prenom: user.prenom } },
   };
+
 }
