@@ -33,7 +33,7 @@ export default function MyApp({ Component, pageProps }) {
 
     return (
         <div className='w-full h-screen'>
-            {!["/Register", "/Login"].includes(router.pathname) && (
+            {!["/register", "/login"].includes(router.pathname) && (
                 <Header isDark={isDark} setIsDark={setIsDark} />
             )}
             <Component
